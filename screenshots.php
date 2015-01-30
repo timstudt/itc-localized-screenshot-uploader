@@ -7,9 +7,10 @@
 #     en_US___ios4in___screen1.png
 #
 $user_home_dir = $_SERVER['HOME'];
-$screen_shots_dir = "$user_home_dir/Desktop/screenshots";
-$itmps_dir = "$user_home_dir/Desktop";
-
+//$screen_shots_dir = "$user_home_dir/Desktop/screenshots";
+//$itmps_dir = "$user_home_dir/Desktop";
+$itmps_dir = "/tmp/itc_upload/";
+$screen_shots_dir = "$itmps_dir/screenshots";
 /*
  * STEP 1: INHALE SCREEN SHOTS
  */
@@ -37,6 +38,7 @@ else {
  */
 
 $tmp_file_output = '';
+$xml_for_screenshots = '';
 foreach ($screen_shots_by_locale_and_device as $locale => $screen_shots_by_device) {
 	// Save all screen shot XML data
 	$xml_to_insert = '<software_screenshots>';
